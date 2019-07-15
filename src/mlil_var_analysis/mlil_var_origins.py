@@ -147,8 +147,16 @@ class MLILSSAVarAnalysisOrigins:
 
             elif var_def_instr.operation == MLILOperation.MLIL_CALL_SSA:
                 # Found a var defined as the result of a function call
-                func_name = self.bv.get_function_at(var_def_instr.dest.value.value).name
-                origins.append(VarOriginCallResult(func_name))
+                func_addr = var_def_instr.dest.value.value
+                func = self.bv.get_function_at(func_addr)
+                if func is None:
+                    # A function call from an address that has no function?
+                    msg = f"Couldn't get function at {hex(func_addr)} (from MLIL_CALL_SSA at {var_def_instr.address})."
+                    origins.append(VarOriginUnknown(msg))
+                    log_error(msg)
+                else:
+                    func_name = self.bv.get_function_at(var_def_instr.dest.value.value).name
+                    origins.append(VarOriginCallResult(func_name))
 
             else:
                 # What is this??

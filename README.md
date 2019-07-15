@@ -1,5 +1,6 @@
 # Format String Finder
 Author: **jofra**
+
 _Finds format string vulnerabilities_
 
 ## Description:
@@ -9,7 +10,7 @@ This plugin will detect format string vulnerabilities and 'format string like' f
 ![](TODO)
 
 ## How it work
- 1. Loads [known functions](TODO) that receive a format parameter.
+ 1. Loads [known functions](https://raw.githubusercontent.com/Vasco-jofra/format-string-finder-binja/master/src/data/default_printf_like_functions.data) that receive a format parameter.
  2. For each xref of these functions find where the fmt parameter comes from:
     1. If it comes from an **argument** we mark it as a **'format string like'** function and test its xrefs
     2. If it is a **constant** value located in a **read-only** area we mark it as **safe**
