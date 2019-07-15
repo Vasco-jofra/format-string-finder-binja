@@ -1,0 +1,109 @@
+# int printf(const char *format, ...);
+# int fprintf(FILE *stream, const char *format, ...);
+# int dprintf(int fd, const char *format, ...);
+# int sprintf(char *str, const char *format, ...);
+# int snprintf(char *str, size_t size, const char *format, ...);
+printf 0
+fprintf 1
+dprintf 1
+sprintf 1
+snprintf 2
+
+# int vprintf(const char *format, va_list ap);
+# int vfprintf(FILE *stream, const char *format, va_list ap);
+# int vdprintf(int fd, const char *format, va_list ap);
+# int vsprintf(char *str, const char *format, va_list ap);
+# int vsnprintf(char *str, size_t size, const char *format, va_list ap);
+vprintf 0
+vfprintf 1
+vdprintf 1
+vsprintf 1
+vsnprintf 2
+
+# wprintf(const wchar_t *format, ...);
+# fwprintf(FILE *stream, const wchar_t *format, ...);
+# swprintf(wchar_t *wcs, size_t maxlen, const wchar_t *format, ...);
+# vwprintf(const wchar_t *format, va_list args);
+# vfwprintf(FILE *stream, const wchar_t *format, va_list args);
+# vswprintf(wchar_t *wcs, size_t maxlen, const wchar_t *format, va_list args);
+wprintf 0
+fwprintf 1
+swprintf 2
+vwprintf 1
+vfwprintf 1
+vswprintf 2
+
+# int asprintf(char **strp, const char *fmt, ...);
+# int vasprintf(char **strp, const char *fmt, va_list ap);
+asprintf 1
+vasprintf 1
+
+# int pmprintf(const char *fmt, ... /*args*/);
+# int pmsprintf(char *str, size_t size, const char *fmt, ... /*args*/);
+pmprintf 0
+pmsprintf 2
+
+# obstack_printf (struct obstack *obs, const char *format, ...)
+# obstack_vprintf (struct obstack *obs, const char *format, va_list args)
+obstack_printf 1
+obstack_vprintf 1
+
+#### __chk functions
+#  __asprintf_chk (char **result_ptr, int flags, const char *format, ...)
+# __dprintf_chk (int d, int flags, const char *format, ...)
+# ___fprintf_chk (FILE *fp, int flag, const char *format, ...)
+# __fwprintf_chk (FILE *fp, int flag, const wchar_t *format, ...)
+# __obstack_vprintf_chk (struct obstack *obstack, int flags, const char *format, va_list args)
+# __obstack_printf_chk (struct obstack *obstack, int flags, const char *format, ...)
+# ___printf_chk (int flag, const char *format, ...)
+# ___snprintf_chk (char *s, size_t maxlen, int flags, size_t slen, const char *format, ...)
+# ___sprintf_chk (char *s, int flags, size_t slen, const char *format, ...)
+# __swprintf_chk (wchar_t *s, size_t n, int flag, size_t s_len, const wchar_t *format, ...)
+# __vasprintf_chk (char **result_ptr, int flags, const char *format, va_list args)
+# __vdprintf_chk (int d, int flags, const char *format, va_list arg)
+# ___vfprintf_chk (FILE *fp, int flag, const char *format, va_list ap)
+# __vfwprintf_chk (FILE *fp, int flag, const wchar_t *format, va_list ap)
+# ___vprintf_chk (int flag, const char *format, va_list ap)
+# ___vsnprintf_chk (char *s, size_t maxlen, int flags, size_t slen, const char *format, va_list args)
+# ___vsprintf_chk (char *s, int flags, size_t slen, const char *format, va_list args)
+# __vwprintf_chk (int flag, const wchar_t *format, va_list ap)
+# __vswprintf_chk (wchar_t *s, size_t maxlen, int flags, size_t slen, const wchar_t *format, va_list args)
+# __wprintf_chk (int flag, const wchar_t *format, ...)
+__asprintf_chk 2
+__dprintf_chk 2
+___fprintf_chk 2
+__fwprintf_chk 2
+__obstack_vprintf_chk 2
+__obstack_printf_chk 2
+___printf_chk 1
+___snprintf_chk 4
+___sprintf_chk 3
+__swprintf_chk 4
+__vasprintf_chk 2
+__vdprintf_chk 2
+___vfprintf_chk 2
+__vfwprintf_chk 2
+___vprintf_chk 1
+___vsnprintf_chk 4
+___vsprintf_chk 3
+__vwprintf_chk 1
+__vswprintf_chk 4
+__wprintf_chk 1
+
+#### __chk aliases
+# __fprintf_chk (FILE *fp, int flag, const char *format, ...)
+# __printf_chk (int flag, const char *format, ...)
+# __snprintf_chk (char *s, size_t maxlen, int flags, size_t slen, const char *format, ...)
+# __sprintf_chk (char *s, int flags, size_t slen, const char *format, ...)
+# __vfprintf_chk (FILE *fp, int flag, const char *format, va_list ap)
+# __vprintf_chk (int flag, const char *format, va_list ap)
+# __vsnprintf_chk (char *s, size_t maxlen, int flags, size_t slen, const char *format, va_list args)
+# __vsprintf_chk (char *s, int flags, size_t slen, const char *format, va_list args)
+__fprintf_chk 2
+__printf_chk 1
+__snprintf_chk 4
+__sprintf_chk 3
+__vfprintf_chk 2
+__vprintf_chk 1
+__vsnprintf_chk 4
+__vsprintf_chk 3

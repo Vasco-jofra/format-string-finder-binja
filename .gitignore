@@ -1,0 +1,10 @@
+**/data_user/*
+!**/data_user/.gitkeep
+
+**/other_tests/*
+
+.vscode/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
