@@ -7,7 +7,7 @@ _Finds format string vulnerabilities_
 This plugin will detect format string vulnerabilities and 'format string like' functions.
 
 ## Example
-![](TODO)
+![](https://raw.githubusercontent.com/Vasco-jofra/format-string-finder-binja/master/images/example.gif)
 
 ## How it work
  1. Loads [known functions](https://raw.githubusercontent.com/Vasco-jofra/format-string-finder-binja/master/src/data/default_printf_like_functions.data) that receive a format parameter.
