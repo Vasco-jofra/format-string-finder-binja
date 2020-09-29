@@ -4,7 +4,7 @@ Author: **jofra**
 _Finds format string vulnerabilities_
 
 ## Description:
-This plugin will detect format string vulnerabilities and 'format string like' functions.
+This plugin will detect format string vulnerabilities and printf-like functions.
 
 ## Example
 ![](https://raw.githubusercontent.com/Vasco-jofra/format-string-finder-binja/master/images/example.gif)
@@ -12,7 +12,7 @@ This plugin will detect format string vulnerabilities and 'format string like' f
 ## How it works
  1. Loads [known functions](https://raw.githubusercontent.com/Vasco-jofra/format-string-finder-binja/master/src/data/default_printf_like_functions.data) that receive a format parameter.
  2. For each xref of these functions find where the fmt parameter comes from:
-    1. If it comes from an **argument** we mark it as a **'format string like'** function and test its xrefs
+    1. If it comes from an **argument** we mark it as a **printf-like function** and test its xrefs
     2. If it is a **constant** value located in a **read-only** area we mark it as **safe**
     3. If it comes from a known **'safe' function call result** (functions from the `dgettext` family) we mark it as **safe**
     4. Otherwise we mark it as **vulnerable**
